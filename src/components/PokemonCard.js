@@ -1,10 +1,10 @@
 import React from 'react'
 import { Card, Grid, Image, Statistic, Divider, Header } from 'semantic-ui-react'
 
-const PokemonCard = ({image, name, classification, height, weight, maxCP, maxHP, types}) => {
+const PokemonCard = ({id, image, name, classification, height, weight, maxCP, maxHP, types, setId}) => {
     return (
             <Grid.Column>
-            <Card fluid>
+            <Card fluid onClick={()=>setId(id)}>
                 <Image size="medium" centered height="100px" src={image}></Image>
                 <Card.Content>
                     <Card.Header>
